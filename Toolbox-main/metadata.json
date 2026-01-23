@@ -1,0 +1,8 @@
+{
+  "name": "Hilton StayExpert",
+  "description": "Your AI-powered companion for a seamless stay, featuring intelligent tools like Digital Memory and Snap & Eat.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
