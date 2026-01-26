@@ -2,7 +2,7 @@ import React from 'react';
 import { ViewState } from '../types';
 
 interface DashboardProps {
-    onNavigate: (view: ViewState) => void;
+  onNavigate: (view: ViewState) => void;
 }
 
 const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
@@ -11,11 +11,12 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
       {/* Grid Layout */}
       <div className="grid grid-cols-2 gap-4">
         {/* Card 1: AI Translator */}
-        <a 
+        <a
           href="https://hilton-ai-translator.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex flex-col items-start justify-between gap-4 p-5 rounded-xl bg-hilton-off-white shadow-premium hover:scale-[1.02] transition-transform duration-200 active:scale-95 h-44 w-full text-left"
+          className="group flex flex-col items-start justify-between gap-4 p-5 rounded-xl bg-hilton-off-white shadow-premium hover:scale-[1.02] transition-transform duration-200 active:scale-95 h-44 w-full text-left animate-fadeInUp"
+          style={{ animationDelay: '0ms' }}
         >
           <div className="flex items-center justify-center size-12 rounded-full bg-white text-black border border-gray-100 shadow-sm group-hover:bg-primary group-hover:text-white transition-colors">
             <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>language</span>
@@ -27,11 +28,12 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
         </a>
 
         {/* Card 2: Snap & Eat */}
-        <a 
+        <a
           href="https://snap-and-eat.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex flex-col items-start justify-between gap-4 p-5 rounded-xl bg-hilton-off-white shadow-premium hover:scale-[1.02] transition-transform duration-200 active:scale-95 h-44 w-full text-left"
+          className="group flex flex-col items-start justify-between gap-4 p-5 rounded-xl bg-hilton-off-white shadow-premium hover:scale-[1.02] transition-transform duration-200 active:scale-95 h-44 w-full text-left animate-fadeInUp"
+          style={{ animationDelay: '100ms' }}
         >
           <div className="flex items-center justify-center size-12 rounded-full bg-white text-black border border-gray-100 shadow-sm group-hover:bg-primary group-hover:text-white transition-colors">
             <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>photo_camera</span>
@@ -42,36 +44,49 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
           </div>
         </a>
 
-        {/* Card 3: Menu Scan */}
-        <button className="group flex flex-col items-start justify-between gap-4 p-5 rounded-xl bg-hilton-off-white shadow-premium hover:scale-[1.02] transition-transform duration-200 active:scale-95 h-44 w-full text-left">
+        {/* Card 3: Hilton Guest Companion */}
+        <a
+          href="https://hilton-companion.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex flex-col items-start justify-between gap-4 p-5 rounded-xl bg-hilton-off-white shadow-premium hover:scale-[1.02] transition-transform duration-200 active:scale-95 h-44 w-full text-left animate-fadeInUp"
+          style={{ animationDelay: '200ms' }}
+        >
           <div className="flex items-center justify-center size-12 rounded-full bg-white text-black border border-gray-100 shadow-sm group-hover:bg-primary group-hover:text-white transition-colors">
-            <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>restaurant_menu</span>
+            <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>concierge</span>
           </div>
           <div>
-            <h3 className="text-hilton-blue text-base font-semibold leading-tight mb-1">Menu Scan</h3>
-            <p className="text-gray-500 text-xs font-medium">Scan & translate</p>
+            <h3 className="text-hilton-blue text-base font-semibold leading-tight mb-1">Hilton Gust Companion</h3>
+            <p className="text-gray-500 text-xs font-medium">Your personal concierge</p>
           </div>
-        </button>
+        </a>
 
         {/* Card 4: AI Fitness Coach */}
-        <button className="group flex flex-col items-start justify-between gap-4 p-5 rounded-xl bg-hilton-off-white shadow-premium hover:scale-[1.02] transition-transform duration-200 active:scale-95 h-44 w-full text-left">
+        <a
+          href="https://petershenfk.github.io/Smart-Fitness-Coach-New/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex flex-col items-start justify-between gap-4 p-5 rounded-xl bg-hilton-off-white shadow-premium hover:scale-[1.02] transition-transform duration-200 active:scale-95 h-44 w-full text-left animate-fadeInUp"
+          style={{ animationDelay: '300ms' }}
+        >
           <div className="flex items-center justify-center size-12 rounded-full bg-white text-black border border-gray-100 shadow-sm group-hover:bg-primary group-hover:text-white transition-colors">
             <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>fitness_center</span>
           </div>
           <div>
-            <h3 className="text-hilton-blue text-base font-semibold leading-tight mb-1">AI Fitness</h3>
+            <h3 className="text-hilton-blue text-base font-semibold leading-tight mb-1">AI Fitness Coach</h3>
             <p className="text-gray-500 text-xs font-medium">Personalized workout</p>
           </div>
-        </button>
+        </a>
 
         {/* Card 5: Digital Memory (Full Width) */}
-        <button 
-            onClick={() => onNavigate('DIGITAL_MEMORY')}
-            className="group col-span-2 flex flex-row items-center justify-start gap-5 p-5 rounded-xl bg-hilton-off-white shadow-premium hover:scale-[1.01] transition-transform duration-200 active:scale-95 h-24 w-full text-left relative overflow-hidden"
+        <button
+          onClick={() => onNavigate('DIGITAL_MEMORY')}
+          className="group col-span-2 flex flex-row items-center justify-start gap-5 p-5 rounded-xl bg-hilton-off-white shadow-premium hover:scale-[1.01] transition-transform duration-200 active:scale-95 h-24 w-full text-left relative overflow-hidden animate-fadeInUp"
+          style={{ animationDelay: '400ms' }}
         >
           {/* Background Decoration */}
           <div className="absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-white/50 to-transparent"></div>
-          
+
           <div className="flex items-center justify-center size-12 rounded-full bg-white text-black border border-gray-100 shadow-sm group-hover:bg-primary group-hover:text-white transition-colors shrink-0 z-10">
             <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>auto_awesome</span>
           </div>
@@ -84,9 +99,9 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
 
       {/* Promo Banner */}
       <div className="mt-6 rounded-xl overflow-hidden relative h-32 w-full shadow-lg group cursor-pointer">
-        <div 
-            className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" 
-            style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuB26nqtU_Z30VKwpvXx2KZyEF--Vd2H2GVjctSHZyYLmXcZV05Q2W2xL-P3zRLj10ae3tNYa9_EbkOfjr4fqLnan5PljtBQRg8X2sZx8wLr99psmoJxzn9bMs9PJxSdyIhBkFtk4W1p3Fb9Z3Oz0bYDHGZEQ9lVcG89CvGqtkHFruPv6FglT4AsV7Cd-IV6YWEvMJKJKsvdv56mbYqEa2MHjY1hoYzizkMHtBOXRkQZ-harzEpf9kLQjk8bDey2tA8P_lYGEkqsAyxb')" }}
+        <div
+          className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+          style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuB26nqtU_Z30VKwpvXx2KZyEF--Vd2H2GVjctSHZyYLmXcZV05Q2W2xL-P3zRLj10ae3tNYa9_EbkOfjr4fqLnan5PljtBQRg8X2sZx8wLr99psmoJxzn9bMs9PJxSdyIhBkFtk4W1p3Fb9Z3Oz0bYDHGZEQ9lVcG89CvGqtkHFruPv6FglT4AsV7Cd-IV6YWEvMJKJKsvdv56mbYqEa2MHjY1hoYzizkMHtBOXRkQZ-harzEpf9kLQjk8bDey2tA8P_lYGEkqsAyxb')" }}
         ></div>
         <div className="absolute inset-0 bg-hilton-blue/80 mix-blend-multiply"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex flex-col justify-center px-6">
