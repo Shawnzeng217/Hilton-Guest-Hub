@@ -15,15 +15,19 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
           href="https://hilton-ai-translator.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex flex-col items-start justify-between gap-4 p-5 rounded-xl bg-hilton-off-white shadow-premium hover:scale-[1.02] transition-transform duration-200 active:scale-95 h-44 w-full text-left animate-fadeInUp"
+          className="group flex flex-col items-start justify-between gap-4 p-5 rounded-xl shadow-premium hover:scale-[1.02] transition-transform duration-200 active:scale-95 h-44 w-full text-left relative overflow-hidden animate-fadeInUp"
           style={{ animationDelay: '0ms' }}
         >
-          <div className="flex items-center justify-center size-12 rounded-full bg-white text-black border border-gray-100 shadow-sm group-hover:bg-primary group-hover:text-white transition-colors">
+          {/* Background Image & Overlay */}
+          <img src="/images/card-concierge.jpg" alt="Background" className="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-500 group-hover:scale-110" />
+          <div className="absolute inset-0 bg-black/50 z-0 backdrop-blur-[0.5px]"></div>
+
+          <div className="flex items-center justify-center size-12 rounded-full bg-white text-black border border-gray-100 shadow-sm group-hover:bg-primary group-hover:text-white transition-colors relative z-10">
             <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>language</span>
           </div>
-          <div>
-            <h3 className="text-hilton-blue text-base font-semibold leading-tight mb-1">AI Translator</h3>
-            <p className="text-gray-500 text-xs font-medium">Real-time translation</p>
+          <div className="relative z-10">
+            <h3 className="text-white text-lg font-semibold leading-tight mb-1">AI Translator</h3>
+            <p className="text-white text-xs italic">Real-time translation</p>
           </div>
         </a>
 
@@ -32,15 +36,19 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
           href="https://snap-and-eat.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex flex-col items-start justify-between gap-4 p-5 rounded-xl bg-hilton-off-white shadow-premium hover:scale-[1.02] transition-transform duration-200 active:scale-95 h-44 w-full text-left animate-fadeInUp"
+          className="group flex flex-col items-start justify-between gap-4 p-5 rounded-xl shadow-premium hover:scale-[1.02] transition-transform duration-200 active:scale-95 h-44 w-full text-left relative overflow-hidden animate-fadeInUp"
           style={{ animationDelay: '100ms' }}
         >
-          <div className="flex items-center justify-center size-12 rounded-full bg-white text-black border border-gray-100 shadow-sm group-hover:bg-primary group-hover:text-white transition-colors">
+          {/* Background Image & Overlay */}
+          <img src="/images/card-food.png" alt="Background" className="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-500 group-hover:scale-110" />
+          <div className="absolute inset-0 bg-black/50 z-0 backdrop-blur-[0.5px]"></div>
+
+          <div className="flex items-center justify-center size-12 rounded-full bg-white text-black border border-gray-100 shadow-sm group-hover:bg-primary group-hover:text-white transition-colors relative z-10">
             <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>photo_camera</span>
           </div>
-          <div>
-            <h3 className="text-hilton-blue text-base font-semibold leading-tight mb-1">Snap & Eat</h3>
-            <p className="text-gray-500 text-xs font-medium">Identify food instantly</p>
+          <div className="relative z-10">
+            <h3 className="text-white text-lg font-semibold leading-tight mb-1">Snap & Eat</h3>
+            <p className="text-white text-xs italic">Identify food instantly</p>
           </div>
         </a>
 
@@ -49,15 +57,19 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
           href="https://hilton-companion.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex flex-col items-start justify-between gap-4 p-5 rounded-xl bg-hilton-off-white shadow-premium hover:scale-[1.02] transition-transform duration-200 active:scale-95 h-44 w-full text-left animate-fadeInUp"
+          className="group flex flex-col items-start justify-between gap-4 p-5 rounded-xl shadow-premium hover:scale-[1.02] transition-transform duration-200 active:scale-95 h-44 w-full text-left relative overflow-hidden animate-fadeInUp"
           style={{ animationDelay: '200ms' }}
         >
-          <div className="flex items-center justify-center size-12 rounded-full bg-white text-black border border-gray-100 shadow-sm group-hover:bg-primary group-hover:text-white transition-colors">
+          {/* Background Image & Overlay */}
+          <img src="/images/card-translator.jpg" alt="Background" className="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-500 group-hover:scale-110" />
+          <div className="absolute inset-0 bg-black/50 z-0 backdrop-blur-[0.5px]"></div>
+
+          <div className="flex items-center justify-center size-12 rounded-full bg-white text-black border border-gray-100 shadow-sm group-hover:bg-primary group-hover:text-white transition-colors relative z-10">
             <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>luggage</span>
           </div>
-          <div>
-            <h3 className="text-hilton-blue text-base font-semibold leading-tight mb-1">Guest Companion</h3>
-            <p className="text-gray-500 text-xs font-medium">Digital instay journey</p>
+          <div className="relative z-10">
+            <h3 className="text-white text-lg font-semibold leading-tight mb-1">Guest Companion</h3>
+            <p className="text-white text-xs italic">Digital instay journey</p>
           </div>
         </a>
 
@@ -66,43 +78,47 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
           href="https://petershenfk.github.io/Smart-Fitness-Coach-New/"
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex flex-col items-start justify-between gap-4 p-5 rounded-xl bg-hilton-off-white shadow-premium hover:scale-[1.02] transition-transform duration-200 active:scale-95 h-44 w-full text-left animate-fadeInUp"
+          className="group flex flex-col items-start justify-between gap-4 p-5 rounded-xl shadow-premium hover:scale-[1.02] transition-transform duration-200 active:scale-95 h-44 w-full text-left relative overflow-hidden animate-fadeInUp"
           style={{ animationDelay: '300ms' }}
         >
-          <div className="flex items-center justify-center size-12 rounded-full bg-white text-black border border-gray-100 shadow-sm group-hover:bg-primary group-hover:text-white transition-colors">
+          {/* Background Image & Overlay */}
+          <img src="/images/card-fitness.jpg" alt="Background" className="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-500 group-hover:scale-110" />
+          <div className="absolute inset-0 bg-black/50 z-0 backdrop-blur-[0.5px]"></div>
+
+          <div className="flex items-center justify-center size-12 rounded-full bg-white text-black border border-gray-100 shadow-sm group-hover:bg-primary group-hover:text-white transition-colors relative z-10">
             <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>fitness_center</span>
           </div>
-          <div>
-            <h3 className="text-hilton-blue text-base font-semibold leading-tight mb-1">Magic Mirror</h3>
-            <p className="text-gray-500 text-xs font-medium">Smart fitness coach</p>
+          <div className="relative z-10">
+            <h3 className="text-white text-lg font-semibold leading-tight mb-1">Magic Mirror</h3>
+            <p className="text-white text-xs italic">Smart fitness coach</p>
           </div>
         </a>
 
         {/* Card 5: Placeholder 1 (Coming Soon) */}
         <div
-          className="group flex flex-col items-start justify-between gap-4 p-5 rounded-xl bg-hilton-off-white/50 border border-dashed border-gray-300 shadow-none h-44 w-full text-left animate-fadeInUp"
+          className="group flex flex-col items-start justify-between gap-4 p-5 rounded-xl bg-white/5 border border-dashed border-white/30 shadow-none h-44 w-full text-left animate-fadeInUp"
           style={{ animationDelay: '400ms' }}
         >
-          <div className="flex items-center justify-center size-12 rounded-full bg-gray-100 text-gray-400">
+          <div className="flex items-center justify-center size-12 rounded-full bg-white/10 text-white/50">
             <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>add</span>
           </div>
           <div>
-            <h3 className="text-gray-400 text-base font-semibold leading-tight mb-1">Coming Soon</h3>
-            <p className="text-gray-400 text-xs font-medium">More tools arriving...</p>
+            <h3 className="text-white/80 text-lg font-semibold leading-tight mb-1">Coming Soon</h3>
+            <p className="text-white/60 text-xs italic">More tools arriving...</p>
           </div>
         </div>
 
         {/* Card 6: Placeholder 2 (Coming Soon) */}
         <div
-          className="group flex flex-col items-start justify-between gap-4 p-5 rounded-xl bg-hilton-off-white/50 border border-dashed border-gray-300 shadow-none h-44 w-full text-left animate-fadeInUp"
+          className="group flex flex-col items-start justify-between gap-4 p-5 rounded-xl bg-white/5 border border-dashed border-white/30 shadow-none h-44 w-full text-left animate-fadeInUp"
           style={{ animationDelay: '500ms' }}
         >
-          <div className="flex items-center justify-center size-12 rounded-full bg-gray-100 text-gray-400">
+          <div className="flex items-center justify-center size-12 rounded-full bg-white/10 text-white/50">
             <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>add</span>
           </div>
           <div>
-            <h3 className="text-gray-400 text-base font-semibold leading-tight mb-1">Coming Soon</h3>
-            <p className="text-gray-400 text-xs font-medium">Exciting new features</p>
+            <h3 className="text-white/80 text-lg font-semibold leading-tight mb-1">Coming Soon</h3>
+            <p className="text-white/60 text-xs italic">More tools arriving...</p>
           </div>
         </div>
       </div>
